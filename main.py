@@ -1,16 +1,15 @@
 import api
 
 
-if __name__ == '__main__':
-    data = api.open_file('intents.json')
-    run = True
+data = api.open_file('intents.json')
+run = True
     
-    print('----------------------------------------------------')
-    while(run):
-        #print(data)
-        answer = input('Ask anything : ')
-        print(f'Processing... waiting to understand : {answer}')
+print('----------------------------------------------------')
+while(run):
+    answer = input('Ask anything : ')
+    tup = api.__find_tag(answer.lower(), data['intents'])
+    print(api.__answer(tup[0], data['intents']))
 
-        if answer in ['exit', 'stop']:
-            run = False
-            print('Thanks for the chat! Have a nice day!\n')
+    if answer in ['exit', 'stop', 's']:
+        run = False
+        print('Thanks for the chat! Have a nice day!\n')

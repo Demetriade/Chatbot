@@ -21,7 +21,7 @@
         },
         {"tag": "game",
          "patterns": ["Id like to play", "games", "what games you have", "what games do you have", "could i play something"],
-         "responses": ["Yes, there are my options...", "Of course! Just check it out!"],
+         "responses": ["Yes, look at my options...", "Of course! Just check it out!"],
          "context_set": ""
         },
         {"tag": "time",
