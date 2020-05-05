@@ -1,0 +1,38 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["hi", "how are you", "is anyone there?", "hello", "good day", "whats up"],
+         "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?"],
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["cya", "see you later", "goodbye", "i am Leaving", "have a good day"],
+         "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
+         "context_set": ""
+        },
+        {"tag": "age",
+         "patterns": ["how old", "how old is finley", "what is your age", "how old are you", "age?"],
+         "responses": ["I am 1 day old!", "1 day young!"],
+         "context_set": ""
+        },
+        {"tag": "name",
+         "patterns": ["what is your name", "what should i call you", "whats your name?", "name"],
+         "responses": ["You can call me Finley.", "I'm Finley!", "I'm Finley aka the best chatbot!"],
+         "context_set": ""
+        },
+        {"tag": "game",
+         "patterns": ["Id like to play", "games", "what games you have", "what games do you have", "could i play something"],
+         "responses": ["Yes, there are my options...", "Of course! Just check it out!"],
+         "context_set": ""
+        },
+        {"tag": "time",
+         "patterns": ["what time", "what time is it", "time?"],
+         "responses": ["We are "],
+         "context_set": ""
+        },
+        {"tag": "date",
+         "patterns": ["what date", "current date", "date"],
+         "responses": ["We are "],
+         "context_set": ""
+        }
+   ]
+}
