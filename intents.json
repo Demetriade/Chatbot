@@ -10,13 +10,13 @@
          "context_set": ""
         },
         {"tag": "age",
-         "patterns": ["how old", "how old is finley", "what is your age", "how old are you", "age?"],
+         "patterns": ["how old", "how old is poe", "what is your age", "how old are you", "age?"],
          "responses": ["I am 1 day old!", "1 day young!"],
          "context_set": ""
         },
         {"tag": "name",
-         "patterns": ["what is your name", "what should i call you", "whats your name?", "name"],
-         "responses": ["You can call me Finley.", "I'm Finley!", "I'm Finley aka the best chatbot!"],
+         "patterns": ["what is your name", "what should i call you", "whats your name", "name", "call"],
+         "responses": ["You can call me Poe.", "I'm Poe!", "I'm Poe aka the best chatbot!"],
          "context_set": ""
         },
         {"tag": "game",
@@ -26,11 +26,11 @@
         },
         {"tag": "time",
          "patterns": ["what time", "what time is it", "time?"],
-         "responses": ["We are "],
+         "responses": ["It is "],
          "context_set": ""
         },
         {"tag": "date",
-         "patterns": ["what date", "current date", "date"],
+         "patterns": ["what date", "current date", "date?"],
          "responses": ["We are "],
          "context_set": ""
         }
