@@ -9,6 +9,8 @@ class Chatbot:
 
     def __init__(self):
         self.intents_list = self.__open_file('intents.json')['intents']
+        self.score = [] # Temp var to see the score
+        self.age = datetime(2020, 5, 5)
     
     def run(self):
         running = True
@@ -17,6 +19,7 @@ class Chatbot:
             answer = input('Ask anything : ')
             tup = self.__find_tag(answer.lower())
             print(self.__answer(tup[0]))
+            print(f"Score = {self.score}")
 
             if answer in ['exit', 'stop', 's']:
                 running = False
@@ -33,10 +36,12 @@ class Chatbot:
 
     def __answer(self, tag_index):
         answ = random.choice(self.intents_list[tag_index]['responses'])
-        if tag_index == 5:
-            answ.join(self.__get_current_time())
+        if tag_index == 2:
+            answ += f" {self.__get_age()} day old"
+        elif tag_index == 5:
+            answ += self.__get_current_time()
         elif tag_index == 6:
-            answ.join(self.__get_current_date())
+            answ += self.__get_current_date()
         return answ
 
     def __find_tag(self, sentense):
@@ -47,6 +52,7 @@ class Chatbot:
         list_score_tags = []
         for dic in self.intents_list:
             list_score_tags.append(self.__compare_patterns(sentense, dic))
+        self.score = list_score_tags
         index_max_value = list_score_tags.index(max(list_score_tags))
         return (index_max_value, self.intents_list[index_max_value]['tag'])
 
@@ -73,3 +79,6 @@ class Chatbot:
 
     def __get_current_time(self):
         return datetime.now().strftime("%H:%M:%S")
+
+    def __get_age(self):
+        return date.today().day - self.age.day if date.today().year == self.age.year else date.today().year - self.age.year

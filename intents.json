@@ -11,11 +11,11 @@
         },
         {"tag": "age",
          "patterns": ["how old", "how old is poe", "what is your age", "how old are you", "age?"],
-         "responses": ["I am 1 day old!", "1 day young!"],
+         "responses": ["I am"],
          "context_set": ""
         },
         {"tag": "name",
-         "patterns": ["what is your name", "what should i call you", "whats your name", "name", "call"],
+         "patterns": ["what is your name", "what should i call you", "whats your name", "who are you", "what are you", "call"],
          "responses": ["You can call me Poe.", "I'm Poe!", "I'm Poe aka the best chatbot!"],
          "context_set": ""
         },
