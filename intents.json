@@ -5,8 +5,8 @@
          "context_set": ""
         },
         {"tag": "goodbye",
-         "patterns": ["cya", "see you later", "goodbye", "i am Leaving", "have a good day"],
-         "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
+         "patterns": ["cya", "see you later", "goodbye", "i am Leaving", "have a good day", "bye", "exit", "stop", "s"],
+         "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!" , "Thanks for the chat! Have a nice day!"],
          "context_set": ""
         },
         {"tag": "age",

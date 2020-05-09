@@ -19,11 +19,11 @@ class Chatbot:
             answer = input('Ask anything : ')
             tup = self.__find_tag(answer.lower())
             print(self.__answer(tup[0]))
-            print(f"Score = {self.score}")
+            print(f"Score = {self.score}") # TODO : remove after testing
 
-            if answer in ['exit', 'stop', 's']:
+            if answer in self.intents_list[1]['patterns']:
                 running = False
-                print('Thanks for the chat! Have a nice day!\n')
+                print(f'{self.__answer(1)}\n')
 
     def __open_file(self, name):
         """
@@ -75,7 +75,15 @@ class Chatbot:
     def __get_current_date(self):
         months = {1 : 'January',  2 : 'February', 3 : 'March', 4 : 'April', 5 : 'May',
             6 : 'June', 7 : 'July', 8 : 'August', 9 : 'September', 10 : 'October', 11 : 'November', 12 : 'December'}
-        return f"{date.today().day} {months[date.today().month]} {date.today().year}"
+        day = "th"
+        current_day = date.today().day
+        if current_day == 1:
+            day = "first"
+        elif current_day == 2:
+            day = "second"
+        elif current_day == 3:
+            day = "third"
+        return f"{months[date.today().month]} {day} {date.today().year}" if current_day < 4 else f"{months[date.today().month]} {current_day}{day} {date.today().year}"
 
     def __get_current_time(self):
         return datetime.now().strftime("%H:%M:%S")
